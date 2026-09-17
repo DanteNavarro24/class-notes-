@@ -1,0 +1,31 @@
+#include <iostream> 
+using namespace std;
+int main(){
+    double a;
+    double b;
+    double c = 20;
+    cout<<"Enter a value for a and b";
+    
+    cin>>a>>b;
+    if (a > 9){
+        cout<<"A is greater than 9\n";
+    }if(a>b){
+        cout<<"A is greater than B\n";
+    }else if (b>a){
+        cout<<"B is greater than A\n";
+        
+    }
+    if(a > 10 || a< 20){
+        cout<<" or condition is true\n";
+    }else if (a>10 && a<20){
+        cout<<" and if condition is true\n";
+    }if(c>=10){
+        if(c !=15){
+            if(c == 20){
+                cout<<" the third if satisfies. yayyyaya\n";
+            }
+        }
+    }
+    
+    return 0;
+}
