@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main(){
+    
+    string full_name;
+    cout<<"enter a fullname:";
+    getline(cin,full_name);
+    cout<<full_name;
+    int age =20;
+    bool has_liscense = true;
+    if(age>=18){
+        if(has_liscense ==true){
+            cout<<" you are eligible to drive"<<endl;
+        }else{
+            cout<<" you need a liscense first to drive"<<endl;
+        }
+    }
+    return 0;
