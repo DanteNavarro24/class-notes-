@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+int main(){
+    double account_balance = 600.34;
+    const int pin = 1234;
+    int enteredpin;
+    const int minimum_value =100;
+    char deposit_money = 'd';
+    char withdrawn_money = 'w';
+    
+    double withdrawn_amount;
+    double deposit_money;
+    
+    cout<<"Insert your card\n";
+    cout<<"Enter your 4 digit code\n";
+    cin>>enteredpin;
+    cout"what function do you want?withdraw or deposit money?";
+    cin>>
+    
+    if(pin == enteredpin && withdrawn_money ==true )
+    {
+         cout<<"Enter the amount you want to withdraw\n";
+         cin>>withdrawn_amount;
+         if( account_balance > minimum_value  && withdrawn_amount < account_balance )
+         {
+                account_balance = account_balance - withdrawn_amount;
+                
+            if(account_balance >= 100){
+                cout<<"you have withdrawn money:"<<withdrawn_amount<<endl;
+                cout<<"your current account balance is:"<<account_balance<<endl;
+            }
+            else {
+                cout<<"You cannot withdraw money, you have to give a lesser amount";
+         }   
+             
+         }
+        } else{
+        cout<<"you entered the wrong pin";
+    }
+    
+    if(pin == enteredpin && deposit_money == true)
+    {
+        
+    }
+    
+    
+    
+    
+    
+    return 0;
+}
