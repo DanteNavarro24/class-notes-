@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+int main(){
+    double account_balance = 600.34;
+    const int pin = 1234;
+    int enteredpin;
+    const int minimum_value =100;
+    char deposit_money = 'd';
+    char withdrawn_money = 'w';
+    char choice;
+    
+    double withdrawn_amount = 0;
+    double depositsed_money = 0;
+    
+    cout<<"Insert your card\n";
+    cout<<"Enter your 4 digit code\n";
+    cin>>enteredpin;
+    
+    if(pin == enteredpin  ){   
+        cout<<"what function do you want?withdraw or deposit money?\n";
+        cout<<"press d/D for deposit and press w/W for withdraw\n";
+        cin>>choice;
+        if(choice == 'w' || choice == 'W'){
+            
+         cout<<"Enter the amount you want to withdraw\n";
+         cin>>withdrawn_amount;
+         if( account_balance > minimum_value  && withdrawn_amount < account_balance )
+         {
+                account_balance = account_balance - withdrawn_amount;
+                
+            if(account_balance >= 100){
+                cout<<"you have withdrawn money:"<<withdrawn_amount<<endl;
+                cout<<"your current account balance is:"<<account_balance<<endl;
+            }
+            else {
+                cout<<"You must maintain a minimun balance.\n";
+                cout<<"you are allowed to withdraw:"<<(account_balance - minimum_value)<<endl;
+                
+         }
+         }
+        }else if(choice == 'd' || choice == 'D'){
+            cout<<"what amount of money do you want to deposit?\n";
+            cin>>depositsed_money;
+            if(depositsed_money < 50000 && depositsed_money >0){
+                account_balance = account_balance + depositsed_money;
+                cout<<"your current balance is:\n"<<account_balance;
+            }else {
+                cout<<"you entered a vauge amount";
+            }
+         }
+    } 
+    else{
+        cout<<"you entered the wrong pin";
+    }
+    
+    if(pin == enteredpin && deposit_money == true)
+    {
+        
+    }
+    
+    
+    
+    
+    
+    return 0;
+}
